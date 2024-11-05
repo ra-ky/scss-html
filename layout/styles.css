@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  text-align: center; /* 중앙 정렬 */
+}
+
+.logo {
+  font-size: 24px; /* 로고 크기 */
+  margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+}
+
+nav {
+  display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* 기본 마진 제거 */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  margin: 20px;
+}
+
+.content {
+  flex: 3; /* 3배 넓이 */
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 1; /* 1배 넓이 */
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+.posts {
+  display: flex; /* 수평 정렬을 위해 Flexbox 사용 */
+  flex-wrap: wrap; /* 너비가 100%를 초과하면 줄바꿈 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  margin: 0 auto; /* 수평 가운데 정렬 */
+  width: 90%; /* 부모의 너비를 차지 */
+
+  .posts-main {
+    border: 1px solid gray;
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+    width: 40%;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+  }
+
+  .posts-sub {
+    border: 1px solid gray;
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+    width: 60%;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; /* 너비가 100%를 초과하면 줄바꿈 */
+      justify-content: flex-start; /* 왼쪽 정렬 */
+      align-items: flex-start; /* 위쪽 정렬 */
+      li {
+        border: 1px solid red;
+        box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+        flex: 0 0 50%;
+      }
+    }
+  }
+}

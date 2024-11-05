@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/css" // 컴파일된 CSS 파일을 저장할 경로
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/assets//css" // 압축된 CSS 파일을 저장할 경로
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.includeItems": [
+    "**/*.scss" // 컴파일할 Sass 파일의 패턴
+  ]
+}
