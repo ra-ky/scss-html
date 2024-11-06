@@ -1,0 +1,40 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.5s ease; // 부드러운 전환 효과
+  transform: translateY(0); // 초기 상태 (보임)
+  z-index: 1000; // 헤더가 다른 요소 위에 표시되도록 설정
+
+  &.hidden {
+    transform: translateY(-100%); // 헤더를 위로 숨김
+  }
+
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  text-align: center; /* 중앙 정렬 */
+
+  .logo {
+    font-size: 80px; /* 로고 크기 */
+    margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+  }
+
+  nav {
+    display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+    ul {
+      li {
+        display: inline;
+        font-size: 18px;
+        font-weight: 700;
+        // letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-right: 40px;
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

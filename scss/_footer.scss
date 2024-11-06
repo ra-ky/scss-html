@@ -1,0 +1,84 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
+  .btn_top {
+    position: fixed; /* 화면에 고정 */
+    right: 20px; /* 화면 오른쪽에 20px 떨어지게 설정 */
+    bottom: 20px; /* 화면 아래쪽에 20px 떨어지게 설정 */
+    z-index: 100;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0; /* 초기 상태에서 투명 */
+    visibility: hidden; /* 초기 상태에서 보이지 않음 */
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* opacity와 visibility에 transition 추가 */
+
+    &::before {
+      display: block;
+      width: 8px;
+      height: 18px;
+      margin: 0 auto 10px;
+      background: url(/assets/images/ic_top.svg) no-repeat;
+      content: "";
+    }
+
+    &.visible {
+      opacity: 1; /* 버튼을 보이게 함 */
+      visibility: visible; /* 보이게 설정 */
+      transition: opacity 0.5s ease, visibility 0s 0.5s; /* 바로 보이게 함 */
+    }
+
+    &.lock {
+      position: absolute;
+      bottom: auto;
+      top: -76px;
+    }
+  }
+
+  .logo {
+    font-size: 60px; /* 로고 크기 */
+    margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+  }
+
+  nav {
+    display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+    margin-bottom: 20px; /* 네비게이션와 카피라이터 간의 간격 */
+    ul {
+      li {
+        display: inline;
+        font-weight: 500;
+        line-height: 1.18;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+
+        &:not(:last-child)::after {
+          display: inline-block;
+          width: 1px;
+          height: 12px;
+          margin: 0 12px;
+          background: #d9d9d9;
+          opacity: 0.4;
+          content: "";
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.43;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+}

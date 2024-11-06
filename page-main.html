@@ -27,23 +27,21 @@
     </header>
 
     <main>
-      <section class="content">
-        <ul class="posts">
-          <li class="posts-top" data-index="0">
-            <a href="">
-              <div class="thum thum_bg">
-                <img src="assets/images/post0.webp" />
-              </div>
-              <div class="thum_content">
-                <p><span>셀러브리티 스타일</span>2024.10.17</p>
-                <h2>프리티 걸! 지금 제니가 푹 빠진 고무줄 바지 연출법</h2>
-              </div>
-            </a>
-          </li>
+      <div class="banner"><img src="assets/images/banner.jpeg" /></div>
+      <h2 class="page-main-title">FASHION</h2>
+      <nav>
+        <ul>
+          <li class="on"><a href="page-main.html">전체</a></li>
+          <li><a href="page-sub.html">패션 트렌드</a></li>
+          <li><a href="page-sub.html">패션 아이템</a></li>
+          <li><a href="page-sub.html">셀러브리티 스타일</a></li>
+          <li><a href="page-sub.html">패션 화보</a></li>
+          <li><a href="page-sub.html">패션 뉴스</a></li>
+          <li><a href="page-sub.html">워치&주얼리</a></li>
         </ul>
-      </section>
+      </nav>
       <section class="content">
-        <h2 class="tit">Today’s Stories</h2>
+        <!-- <h3 class="tit">Today’s Stories</h3> -->
         <ul class="posts">
           <li class="posts-main" data-index="1"></li>
           <li class="posts-sub posts-default">
@@ -72,18 +70,7 @@
         </ul>
       </section>
       <section class="content">
-        <h2 class="tit">PEOPLE NOW</h2>
-        <div class="posts">
-          <ul class="posts-thum">
-            <li class="post" data-index="9"></li>
-            <li class="post" data-index="7"></li>
-            <li class="post" data-index="8"></li>
-            <li class="post" data-index="6"></li>
-          </ul>
-        </div>
-      </section>
-      <section class="content">
-        <h2 class="tit">Must Read</h2>
+        <h2 class="tit">패션 트렌드</h2>
         <ul class="posts">
           <li class="posts-default">
             <ul>
@@ -96,24 +83,23 @@
         </ul>
       </section>
       <section class="content">
-        <h2 class="tit">fashion</h2>
+        <h2 class="tit">패션 아이템</h2>
         <ul class="posts">
-          <li class="posts-sub posts-default">
-            <ul class="left">
-              <li class="post" data-index="5"></li>
-              <li class="post" data-index="6"></li>
+          <li class="posts-default">
+            <ul>
+              <li class="post" data-index="9"></li>
               <li class="post" data-index="7"></li>
               <li class="post" data-index="8"></li>
+              <li class="post" data-index="6"></li>
             </ul>
           </li>
-          <li class="posts-main" data-index="3"></li>
         </ul>
       </section>
       <section class="content">
         <h2 class="tit">Latest stories</h2>
         <ul class="posts">
           <li class="posts-default">
-            <ul>
+            <ul id="more-posts">
               <li class="post" data-index="0"></li>
               <li class="post" data-index="1"></li>
               <li class="post" data-index="2"></li>
@@ -133,7 +119,9 @@
     <script type="text/javascript" src="index.js"></script>
 
     <footer>
-      <button class="btn_top" type="button">top</button>
+      <button class="btn_top" type="button" style="display: inline-block">
+        top
+      </button>
       <div class="logo">VOGUE</div>
       <nav>
         <ul>
