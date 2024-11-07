@@ -267,6 +267,7 @@
 
   .posts-main {
     width: 40%;
+    order: 2;
 
     .thum {
       padding-top: 150%;
@@ -281,13 +282,11 @@
 
   .posts-sub {
     width: 60%;
+    order: 3;
+
     ul {
       width: 100%;
       margin: 0 15px;
-
-      &.left {
-        margin: 0 -15px;
-      }
 
       li {
         flex: 0 0 calc(50% - 30px);
@@ -296,5 +295,14 @@
         }
       }
     }
+
+    &.left {
+      order: 1;
+      ul {
+        margin: 0 -15px;
+      }
+    }
   }
 }
+
+@import "posts-media";

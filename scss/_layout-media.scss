@@ -1,0 +1,14 @@
+@media (max-width: 820px) {
+  main {
+    margin-top: 120px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2vw;
+    }
+
+    > .content {
+      margin-bottom: 4vw;
+    }
+  }
+}

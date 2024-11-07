@@ -53,6 +53,7 @@ footer {
     display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
     margin-bottom: 20px; /* 네비게이션와 카피라이터 간의 간격 */
     ul {
+      display: flex; /* 항목들을 가로로 정렬 */
       li {
         display: inline;
         font-weight: 500;
@@ -74,7 +75,7 @@ footer {
   }
 
   .copyright {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.43;
@@ -82,3 +83,5 @@ footer {
     text-transform: uppercase;
   }
 }
+
+@import "footer-media";

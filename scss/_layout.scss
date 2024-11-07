@@ -45,6 +45,30 @@ main {
     margin-bottom: 15px;
   }
 
+  .tit {
+    display: flex;
+    justify-content: space-between; /* 자식 요소들을 양쪽 끝으로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+
+    .btn_more {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #666;
+      text-transform: uppercase;
+
+      &:after {
+        display: inline-block;
+        width: 8px;
+        height: 10px;
+        margin: 0 0 0 4px;
+        background: url(/assets/images/btn_more.svg) no-repeat;
+        content: "";
+      }
+    }
+  }
+
   .page-main-title {
     text-align: center;
   }
@@ -55,3 +79,5 @@ main {
     @import "posts";
   }
 }
+
+@import "layout-media";

@@ -18,14 +18,14 @@ var posts_list = [
     category: "패션 뉴스",
     date: "2024.11.05",
     title: "사르노가 '올드 할리우드'에 바치는 헌사, 구찌 노떼 컬렉션",
-    author: "by 안건호, Nicole Phelps",
+    author: "안건호, Nicole Phelps",
   },
   {
     image: "assets/images/post3.webp",
     category: "뷰티 화보",
     date: "2024.11.04",
     title: "모든 여성에겐 자신만의 누드 컬러가 있다",
-    author: "by 이주현, Nicole Phelps",
+    author: "이주현, Nicole Phelps",
   },
   {
     image: "assets/images/post4.webp",

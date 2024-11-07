@@ -21,17 +21,27 @@ header {
   }
 
   nav {
-    display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+    display: flex; /* Flexbox로 메뉴 항목들을 수평 배치 */
+    justify-content: center; /* 메뉴 항목을 왼쪽 정렬 */
     width: 100%;
-    text-align: center;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none; /* 스크롤바를 숨깁니다 */
+    }
+
     ul {
+      display: flex; /* ul 자체를 flex로 설정 */
+      padding: 0;
+      margin: 0;
+      flex-wrap: nowrap; /* 메뉴 항목들이 한 줄로 계속 나열되도록 설정 */
       li {
-        display: inline;
+        display: inline-flex; /* 메뉴 항목을 inline-flex로 설정 */
         font-size: 18px;
         font-weight: 700;
-        // letter-spacing: 0.1em;
         text-transform: uppercase;
         margin-right: 40px;
+
         a {
           font-size: 1em;
         }
@@ -61,3 +71,5 @@ header {
     }
   }
 }
+
+@import "header-media";

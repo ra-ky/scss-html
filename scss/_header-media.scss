@@ -1,0 +1,33 @@
+@media (max-width: 820px) {
+  header {
+    padding: 5.3vw 0;
+
+    &.main-header {
+      padding: 10px 0;
+      .logo {
+        font-size: 40px;
+        text-align: left;
+      }
+    }
+
+    &.sub-header {
+      padding: 10px 0;
+      .logo {
+        font-size: 40px;
+      }
+    }
+
+    nav {
+      justify-content: flex-start;
+      ul {
+        display: table;
+        padding-left: 24px;
+        li {
+          display: table-cell;
+          font-size: 1rem;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
