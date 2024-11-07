@@ -73,6 +73,8 @@ var posts_list = [
 
 // 페이지가 로드된 후 실행
 document.addEventListener("DOMContentLoaded", function () {
+  // progress
+  const progress = document.querySelector(".progress");
   // top 버튼
   const btnTop = document.querySelector(".btn_top");
   // 푸터
@@ -110,6 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     lastScrollY = window.scrollY;
 
+    if (progress) {
+      const scrollTop = window.scrollY; // 현재 스크롤 위치
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight; // 문서의 총 높이에서 뷰포트 높이를 뺌
+      const scrollPercent = (scrollTop / docHeight) * 100; // 스크롤 백분율 계산
+      progress.style.width = `${scrollPercent}%`;
+    }
     // 스크롤이 맨 아래에 도달했는지 확인
     if (
       window.innerHeight + window.scrollY >=
@@ -169,10 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 모든 .post 요소를 선택
-  const postsMain = document.querySelectorAll(".posts-top,.posts-main");
+  // 모든 .post-m 요소를 선택
+  const postsMain = document.querySelectorAll(".post-m");
 
-  // 각 .post 요소에 HTML 삽입
+  // 각 .post-m 요소에 HTML 삽입
   postsMain.forEach((post) => {
     const index = post.getAttribute("data-index");
     const postData = posts_list[index];
@@ -190,10 +199,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 모든 .post 요소를 선택
-  const postsThum = document.querySelectorAll(".posts-thum li");
+  // 모든 .post-t 요소를 선택
+  const postsThum = document.querySelectorAll(".post-t");
 
-  // 각 .post 요소에 HTML 삽입
+  // 각 .post-t 요소에 HTML 삽입
   postsThum.forEach((post) => {
     const index = post.getAttribute("data-index");
     const postData = posts_list[index];
@@ -204,8 +213,23 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="thum_content">
           <p>${postData.category}</p>
-          <h2>${postData.title}</h2>
+          <h3>${postData.title}</h3>
         </div>
+      </a>`;
+      post.innerHTML = postHtml;
+    }
+  });
+
+  // 모든 .post 요소를 선택
+  const postsList = document.querySelectorAll(".post-l");
+
+  // 각 .post 요소에 HTML 삽입
+  postsList.forEach((post) => {
+    const index = post.getAttribute("data-index");
+    const postData = posts_list[index];
+    if (postData) {
+      const postHtml = `<a href="page.html">
+        <h3>${postData.title}</h3>
       </a>`;
       post.innerHTML = postHtml;
     }

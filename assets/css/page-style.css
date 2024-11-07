@@ -53,6 +53,15 @@ select {
   margin: 0;
 }
 
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -63,18 +72,19 @@ header {
   z-index: 1000;
   background-color: white;
   color: black;
-  padding: 20px 0;
-  text-align: center; /* 중앙 정렬 */
+  padding: 40px 0;
 }
 header.hidden {
   transform: translateY(-100%);
 }
 header .logo {
-  font-size: 80px; /* 로고 크기 */
-  margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+  font-size: 60px; /* 로고 크기 */
+  margin: 10px 24px; /* 로고와 네비게이션 간의 간격 */
 }
 header nav {
   display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+  width: 100%;
+  text-align: center;
 }
 header nav ul li {
   display: inline;
@@ -85,6 +95,23 @@ header nav ul li {
 }
 header nav ul li a {
   font-size: 1em;
+}
+header.main-header .logo {
+  font-size: 90px;
+  text-align: center;
+}
+header.sub-header {
+  padding: 30px 0;
+}
+header.sub-header::before {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1600px;
+  height: 1px;
+  background: #e4e4e4;
+  content: "";
+  transform: translateX(-50%);
 }
 
 footer {
@@ -175,14 +202,383 @@ main .banner img {
   width: 100%;
   height: 100%;
 }
-main h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-main .page-main-title {
-  text-align: center;
+main .progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  z-index: 9;
+  background: #000;
+  transition: 0.1s linear;
 }
 main > .content {
-  margin-bottom: 130px;
+  padding: 40px 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+main > .content .thum {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+main > .content .thum img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main > .content .thum_bg::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.5;
+  content: "";
+}
+main > .content .thum_content {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+main > .content .thum_content p {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 29px 0;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+main > .content .thum_content p span:first-child {
+  margin-top: -2px;
+  font-weight: 700;
+  font-size: 1.06rem;
+  color: #fff;
+}
+main > .content .thum_content p span:first-child::after {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 8px;
+  background: #fff;
+  opacity: 0.5;
+  content: "";
+}
+main > .content .thum_content p span:last-child {
+  font-weight: 400;
+}
+main > .content .thum_content h2,
+main > .content .thum_content h3 {
+  overflow: hidden;
+  margin: 30px 0 0;
+  max-height: 126px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.37;
+  letter-spacing: -0.002em;
+}
+main > .content .posts-default {
+  width: 100%;
+}
+main > .content .posts-default ul {
+  width: calc(100% + 30px);
+  display: flex;
+  flex-wrap: wrap; /* 너비가 100%를 초과하면 줄바꿈 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  margin: 0 -15px;
+}
+main > .content .posts-default ul li {
+  flex: 0 0 calc(25% - 30px);
+  margin: 0px 15px;
+}
+main > .content .posts-default ul li .thum {
+  padding-top: 66%;
+  margin: 0 0 30px 0;
+}
+main > .content .posts-default ul li .content .category {
+  margin-bottom: 10px;
+}
+main > .content .posts-default ul li .content h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  max-height: 99px;
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+main > .content .posts-default ul li .content .date {
+  font-size: 0.81rem;
+  color: #999;
+  letter-spacing: 0;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  line-height: 1rem;
+}
+main > .content .posts-default ul li .content .date span {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 10px;
+  /* max-width: calc(100% - 72px); */
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+}
+main > .content .posts-default ul li .content .date span::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #999999;
+  opacity: 0.5;
+  position: absolute;
+  top: calc(50% + 1px);
+  left: 0;
+  transform: translateY(-50%);
+}
+main > .content .posts-default.posts-mini ul li {
+  flex: 0 0 100%;
+  margin-bottom: 15px;
+}
+main > .content .posts-default.posts-mini ul li a {
+  display: flex;
+  align-items: center;
+}
+main > .content .posts-default.posts-mini ul li a .thum {
+  width: 12.5%;
+  padding-top: 12.5%;
+  margin: 0;
+}
+main > .content .posts-default.posts-mini ul li a .content {
+  width: 87.5%;
+  padding-left: 20px;
+}
+main > .content .posts-default.posts-mini ul li a .content .category {
+  font-size: 0.9rem;
+}
+main > .content .posts-default.posts-mini ul li a .content h3 {
+  font-size: 1.1rem;
+}
+main > .content .posts-list ul li a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 10px;
+  background-color: #000;
+  position: absolute;
+}
+main > .content .posts-list ul li a h3 {
+  overflow: hidden;
+  line-height: 1.5;
+  padding-left: 13px;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-position: under;
+  min-height: 24px;
+}
+main > .content .posts {
+  display: flex; /* 수평 정렬을 위해 Flexbox 사용 */
+  flex-wrap: wrap; /* 너비가 100%를 초과하면 줄바꿈 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  margin: 0 auto; /* 수평 가운데 정렬 */
+  width: 100%; /* 부모의 너비를 차지 */
+}
+main > .content .posts a {
+  display: block;
+  position: relative;
+}
+main > .content .posts .posts-top {
+  width: 100%;
+}
+main > .content .posts .posts-top .thum {
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  padding-top: 50%;
+}
+main > .content .posts .posts-top .thum_content {
+  left: 10px;
+  right: 10px;
+  bottom: 90px;
+  text-align: center;
+}
+main > .content .posts .posts-top .thum_content p {
+  justify-content: center;
+}
+main > .content .posts .posts-top h2,
+main > .content .posts .posts-top h3 {
+  font-size: 3rem;
+}
+main > .content .posts .posts-thum {
+  width: calc(100% + 30px);
+  display: flex;
+  margin: 0 -15px;
+}
+main > .content .posts .posts-thum li {
+  flex: 0 0 calc(25% - 30px);
+  margin: 0px 15px;
+}
+main > .content .posts .posts-thum li .thum {
+  padding-top: 150%;
+}
+main > .content .posts .posts-thum li .thum_content {
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+main > .content .posts .posts-thum li .thum_content p {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+main > .content .posts .posts-thum li h2,
+main > .content .posts .posts-thum li h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+main > .content .posts .posts-main {
+  width: 40%;
+}
+main > .content .posts .posts-main .thum {
+  padding-top: 150%;
+}
+main > .content .posts .posts-main .thum_content {
+  left: 20px;
+  right: 20px;
+  bottom: 30px;
+}
+main > .content .posts .posts-sub {
+  width: 60%;
+}
+main > .content .posts .posts-sub ul {
+  width: 100%;
+  margin: 0 15px;
+}
+main > .content .posts .posts-sub ul.left {
+  margin: 0 -15px;
+}
+main > .content .posts .posts-sub ul li {
+  flex: 0 0 calc(50% - 30px);
+}
+main > .content .posts .posts-sub ul li:nth-child(n+3) {
+  margin-top: 82px;
+}
+main > .content .post-share {
+  width: 17%;
+  max-width: 272px;
+  position: sticky;
+  top: 20px; /* 화면 맨 위에 붙도록 설정 (필요한 만큼 조절 가능) */
+  align-self: flex-start; /* 상단 위치 고정 */
+}
+main > .content .post-share .category {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  letter-spacing: -0.002e;
+}
+main > .content .post-share .date {
+  margin: 0 0 8px 0;
+  font-size: 0.875rem;
+  letter-spacing: -0.002em;
+  color: #888;
+}
+main > .content .post-share .author {
+  display: flex;
+  color: #000;
+  font-weight: 600;
+  flex-direction: column;
+  line-height: 1.3rem;
+}
+main > .content .post-share .author::before {
+  content: "by";
+  margin-right: 5px;
+  position: absolute;
+}
+main > .content .post-share .author li {
+  padding-left: 25px;
+}
+main > .content .post-content {
+  overflow: hidden; /* 또는 overflow: auto */
+  padding-right: 8.5%;
+  width: 83%;
+}
+main > .content .post-content > h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+main > .content .post-content > h2 {
+  line-height: 1.3;
+  font-size: 1.375rem;
+  margin: 60px 0 -15px;
+}
+main > .content .post-content > p {
+  margin: 30px 0;
+  font-size: 1.06rem;
+  line-height: 1.76;
+  word-break: normal;
+}
+main > .content .post-content > img {
+  display: block;
+  margin: 36px 0;
+}
+main > .content .post-relate {
+  width: 100%;
+  margin: 20px 0 30px;
+}
+main > .content .post-relate h2 {
+  padding: 11px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+  margin-bottom: 10px;
+}
+main > .content .post-news {
+  width: 100%;
+  margin: 20px 0 30px;
+}
+main > .content .post-news h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.75rem;
+}
+main > .content .post-news ul li {
+  flex: 0 0 calc(33.3% - 30px);
+}
+main > .content .post-now {
+  width: 100%;
+  margin: 20px 0 30px;
+}
+main > .content .post-now .posts-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+main > .content .post-now .posts-title h2 {
+  font-weight: 700;
+  letter-spacing: -0.002em;
+  word-break: break-all;
+  line-height: 1.3;
+  font-size: 2rem;
+  margin: 0 15px 0 0;
+}
+main > .content .post-now .posts-title p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #909090;
+}
+main > .content .post-now .posts-title p::before {
+  content: "|";
+  margin-right: 10px;
+  font-weight: 100;
+}
+main > .content .post-now .posts-thum li {
+  flex: 0 0 calc(33.3% - 30px);
+  margin: 0px 15px;
 }

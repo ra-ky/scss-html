@@ -13,16 +13,17 @@ header {
 
   background-color: white;
   color: black;
-  padding: 20px 0;
-  text-align: center; /* 중앙 정렬 */
+  padding: 40px 0;
 
   .logo {
-    font-size: 80px; /* 로고 크기 */
-    margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+    font-size: 60px; /* 로고 크기 */
+    margin: 10px 24px; /* 로고와 네비게이션 간의 간격 */
   }
 
   nav {
     display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+    width: 100%;
+    text-align: center;
     ul {
       li {
         display: inline;
@@ -35,6 +36,28 @@ header {
           font-size: 1em;
         }
       }
+    }
+  }
+
+  &.main-header {
+    .logo {
+      font-size: 90px;
+      text-align: center;
+    }
+  }
+
+  &.sub-header {
+    padding: 30px 0;
+
+    &::before {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 1600px;
+      height: 1px;
+      background: #e4e4e4;
+      content: "";
+      transform: translateX(-50%);
     }
   }
 }

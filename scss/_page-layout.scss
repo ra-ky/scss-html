@@ -15,19 +15,22 @@ main {
     }
   }
 
-  h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-  }
-
-  .page-main-title {
-    text-align: center;
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    z-index: 9;
+    background: #000;
+    transition: 0.1s linear;
   }
 
   > .content {
-    margin-bottom: 130px;
-
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @import "posts";
     @import "page";
   }
 }
