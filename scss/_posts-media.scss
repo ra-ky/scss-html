@@ -49,6 +49,26 @@
         }
       }
     }
+
+    &.posts-mini {
+      ul {
+        li {
+          a {
+            .thum {
+              width: 31%;
+              padding-top: 31%;
+            }
+            .content {
+              width: calc(69% - 4.2vw);
+              padding-left: 4.2vw;
+              h3 {
+                margin: 5px 4.2vw 4vw 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .posts {

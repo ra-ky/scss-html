@@ -156,7 +156,7 @@
             margin: 0;
           }
           .content {
-            width: 87.5%;
+            width: calc(87.5% - 20px);
             padding-left: 20px;
             .category {
               font-size: 0.9rem;

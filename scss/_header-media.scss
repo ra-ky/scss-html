@@ -10,15 +10,25 @@
 
     &.main-header {
       padding: 5.3vw 0;
+      nav {
+        margin: 24px 0 0 0;
+      }
     }
 
     &.sub-header {
       padding: 5.3vw 0;
+      nav {
+        margin: 24px 0 0 0;
+      }
+      .logo {
+        width: 127px;
+        height: 33px;
+      }
     }
 
     nav {
       justify-content: flex-start;
-      margin: 24px 0 0 0;
+
       ul {
         display: table;
         padding-left: 24px;

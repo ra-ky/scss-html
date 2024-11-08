@@ -143,12 +143,21 @@ header.sub-header::before {
   header.main-header {
     padding: 5.3vw 0;
   }
+  header.main-header nav {
+    margin: 24px 0 0 0;
+  }
   header.sub-header {
     padding: 5.3vw 0;
   }
+  header.sub-header nav {
+    margin: 24px 0 0 0;
+  }
+  header.sub-header .logo {
+    width: 127px;
+    height: 33px;
+  }
   header nav {
     justify-content: flex-start;
-    margin: 24px 0 0 0;
   }
   header nav ul {
     display: table;
@@ -189,7 +198,7 @@ footer .btn_top::before {
   width: 8px;
   height: 18px;
   margin: 0 auto 10px;
-  background: url(/assets/images/ic_top.svg) no-repeat;
+  background: url(../images/ic_top.svg) no-repeat;
   content: "";
 }
 footer .btn_top.visible {
@@ -428,7 +437,7 @@ main > .content .posts-default.posts-mini ul li a .thum {
   margin: 0;
 }
 main > .content .posts-default.posts-mini ul li a .content {
-  width: 87.5%;
+  width: calc(87.5% - 20px);
   padding-left: 20px;
 }
 main > .content .posts-default.posts-mini ul li a .content .category {
@@ -585,6 +594,17 @@ main > .content .posts .posts-sub.left ul {
   }
   main > .content .posts-default ul li .content .date {
     font-size: 0.7rem;
+  }
+  main > .content .posts-default.posts-mini ul li a .thum {
+    width: 31%;
+    padding-top: 31%;
+  }
+  main > .content .posts-default.posts-mini ul li a .content {
+    width: calc(69% - 4.2vw);
+    padding-left: 4.2vw;
+  }
+  main > .content .posts-default.posts-mini ul li a .content h3 {
+    margin: 5px 4.2vw 4vw 0;
   }
   main > .content .posts .posts-top .thum {
     padding-top: 150%;
