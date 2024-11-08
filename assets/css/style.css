@@ -77,15 +77,11 @@ header {
 header.hidden {
   transform: translateY(-100%);
 }
-header .logo {
-  font-size: 60px; /* 로고 크기 */
-  margin: 10px 24px; /* 로고와 네비게이션 간의 간격 */
-}
 header nav {
   display: flex; /* Flexbox로 메뉴 항목들을 수평 배치 */
   justify-content: center; /* 메뉴 항목을 왼쪽 정렬 */
-  width: 100%;
   overflow-x: auto;
+  margin: 40px 0 0 40px;
 }
 header nav::-webkit-scrollbar {
   display: none; /* 스크롤바를 숨깁니다 */
@@ -107,11 +103,22 @@ header nav ul li a {
   font-size: 1em;
 }
 header.main-header .logo {
-  font-size: 90px;
   text-align: center;
 }
 header.sub-header {
-  padding: 30px 0;
+  padding-left: 48px;
+  padding-right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 로고와 네비게이션을 좌우로 배치 */
+  flex-wrap: wrap;
+}
+header.sub-header .logo {
+  width: 192px;
+  height: 50px;
+}
+header.sub-header nav {
+  margin: 0;
 }
 header.sub-header::before {
   position: absolute;
@@ -128,21 +135,20 @@ header.sub-header::before {
   header {
     padding: 5.3vw 0;
   }
-  header.main-header {
-    padding: 10px 0;
+  header .logo {
+    width: 127px;
+    height: 33px;
+    margin-left: 24px;
   }
-  header.main-header .logo {
-    font-size: 40px;
-    text-align: left;
+  header.main-header {
+    padding: 5.3vw 0;
   }
   header.sub-header {
-    padding: 10px 0;
-  }
-  header.sub-header .logo {
-    font-size: 40px;
+    padding: 5.3vw 0;
   }
   header nav {
     justify-content: flex-start;
+    margin: 24px 0 0 0;
   }
   header nav ul {
     display: table;
@@ -197,12 +203,15 @@ footer .btn_top.lock {
   top: -76px;
 }
 footer .logo {
-  font-size: 60px; /* 로고 크기 */
-  margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+  display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+  width: 100%;
+}
+footer .logo img {
+  width: 219px;
 }
 footer nav {
   display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
-  margin-bottom: 20px; /* 네비게이션와 카피라이터 간의 간격 */
+  margin: 24px 0;
 }
 footer nav ul {
   display: flex; /* 항목들을 가로로 정렬 */
@@ -237,8 +246,10 @@ footer .copyright {
     padding: 10.6vw 0;
   }
   footer .logo {
-    font-size: 40px; /* 로고 크기 */
-    margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+    width: 36.8vw;
+  }
+  footer nav {
+    margin: 5.3vw 0;
   }
   footer nav ul li {
     font-size: 0.8rem;

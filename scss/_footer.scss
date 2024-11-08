@@ -45,13 +45,16 @@ footer {
   }
 
   .logo {
-    font-size: 60px; /* 로고 크기 */
-    margin-bottom: 10px; /* 로고와 네비게이션 간의 간격 */
+    display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
+    width: 100%;
+    img {
+      width: 219px;
+    }
   }
 
   nav {
     display: inline-block; /* 중앙 정렬을 위해 inline-block 사용 */
-    margin-bottom: 20px; /* 네비게이션와 카피라이터 간의 간격 */
+    margin: 24px 0;
     ul {
       display: flex; /* 항목들을 가로로 정렬 */
       li {
