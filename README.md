@@ -4,7 +4,7 @@ SCSS를 통해 사용해서 vogue 사이트 생성
 
 ### 페이지
 
-- [메인 페이지](https://ra-ky.github.io/scss-html/)
+- <a href="https://ra-ky.github.io/scss-html/" target="_blank">[메인 페이지]</a>
 - [서브 메인 페이지](https://ra-ky.github.io/scss-html/page-main.html)
 - [서브 페이지](https://ra-ky.github.io/scss-html/page-sub.html)
 - [뷰 페이지](https://ra-ky.github.io/scss-html/page.html)
