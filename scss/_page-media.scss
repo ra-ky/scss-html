@@ -1,0 +1,108 @@
+@media (max-width: 820px) {
+  .post-share {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+
+    h1 {
+      display: block;
+    }
+
+    .category {
+      margin: 0 0 4vw 0;
+      font-size: 0.9rem;
+    }
+
+    .date {
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .author {
+      font-size: 1rem;
+    }
+  }
+
+  .post-content {
+    width: 100%;
+    padding: 0;
+
+    > h1 {
+      display: none;
+    }
+
+    > h2 {
+      font-size: 1.2rem;
+      margin: 30px 0 -15px;
+    }
+
+    > p {
+      font-size: 0.9rem;
+    }
+
+    > img {
+      margin: 24px 0;
+    }
+  }
+
+  .post-relate {
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  .post-news {
+    h2 {
+      font-size: 1.4rem;
+    }
+    ul {
+      li {
+        font-size: 0.8rem;
+        flex: 0 0 calc(50% - 30px);
+      }
+    }
+  }
+
+  .post-now {
+    .posts-title {
+      display: block;
+      h2 {
+        // font-size: 1.6rem;
+        // width: 100%;
+      }
+      p {
+        &::before {
+          content: "";
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    .posts-thum {
+      overflow-x: auto;
+      padding-bottom: 10px; /* 스크롤 위치를 아래쪽으로 이동시키기 위한 여백 */
+      scrollbar-gutter: stable; /* 스크롤바 위치가 레이아웃에 영향 주지 않도록 설정 */
+
+      /* 스크롤바 스타일 */
+      &::-webkit-scrollbar {
+        height: 8px; /* 스크롤바 높이 */
+      }
+
+      &::-webkit-scrollbar-track {
+        margin: 0 20px; /* 좌우 20px 여백 적용 */
+        background-color: transparent; /* 트랙 배경 투명하게 */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #aaa; /* 스크롤바 색상 */
+        border-radius: 4px;
+      }
+
+      li {
+        flex: 0 0 calc(60% - 30px);
+      }
+    }
+  }
+}

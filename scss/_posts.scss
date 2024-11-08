@@ -83,7 +83,7 @@
     margin: 0 -15px;
     li {
       flex: 0 0 calc(25% - 30px);
-      margin: 0px 15px;
+      margin: 0 15px 20px;
 
       .thum {
         padding-top: 66%;
@@ -119,6 +119,9 @@
             padding-left: 10px;
             /* max-width: calc(100% - 72px); */
             white-space: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
             overflow: hidden;
             word-break: break-all;
             &::after {
@@ -290,9 +293,6 @@
 
       li {
         flex: 0 0 calc(50% - 30px);
-        &:nth-child(n + 3) {
-          margin-top: 82px;
-        }
       }
     }
 

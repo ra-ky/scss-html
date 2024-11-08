@@ -87,6 +87,17 @@
 
       li {
         flex: 0 0 calc(60% - 30px);
+
+        .thum_content {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        h2,
+        h3 {
+          font-size: 1rem;
+        }
       }
     }
 

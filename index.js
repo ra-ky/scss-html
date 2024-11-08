@@ -11,7 +11,7 @@ var posts_list = [
     category: "Beauty",
     date: "2024.11.04",
     title: "MY FIRST LUXURY",
-    author: "",
+    author: "최보경",
   },
   {
     image: "assets/images/post2.webp",

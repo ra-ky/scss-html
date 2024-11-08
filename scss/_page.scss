@@ -5,6 +5,12 @@
   top: 20px; /* 화면 맨 위에 붙도록 설정 (필요한 만큼 조절 가능) */
   align-self: flex-start; /* 상단 위치 고정 */
 
+  h1 {
+    display: none;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
   .category {
     margin: 0 0 20px 0;
     font-weight: 700;
@@ -128,3 +134,5 @@
     }
   }
 }
+
+@import "page-media";
